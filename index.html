@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html id="ble-console">
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css" media="all">
+  </head>
+  <body>
+
+    <div class="ble-console" >
+
+      <div class="console">
+        <ul class="custom-ul">
+          <li v-repeat="logs">
+            <p class="log-content">{{content}}</p>
+            <p class="log-date">{{date}}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="command">
+        <p id="title">{{title}}</p>
+        <button class="custom-btn" id="clear" v-on="click: clear( this )">Clear</button>
+      </div>
+
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript" src="./js/vue.min.js"></script>
+<script type="text/javascript" src="./js/bundle.js"></script>

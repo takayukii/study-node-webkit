@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+
+html, body { height:100%; }
+
+.ble-console {
+  height : 100%;
+}
+
+.custom-ul {
+  margin : 0;
+  padding : 0;
+  list-style: none;
+}
+.custom-ul li{
+  padding : 5px;
+}
+.custom-ul p{
+  margin : 0;
+  padding : 0;
+}
+.log-date{
+  color : silver;
+  font-size : x-small;
+}
+
+.console {
+  padding : 20px 20px 70px 20px;
+  width : 100%;
+  height : 100%;
+  background: gray;
+  color : white;
+  overflow : scroll;
+}
+
+.command {
+  position : relative;
+  top : -70px;
+  padding-left : 15px;
+  width : 100%;
+  height : 70px;
+  background: silver;
+}
+
+#title {
+  position : absolute;
+  top : 20px;
+  font-size : x-large;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+#clear {
+  position : absolute;
+  top : 15px;
+  right: 20px;
+}
+
+.custom-btn {
+  background: rgb(87, 87, 87);
+  border: 1px solid rgb(87, 87, 87);
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.custom-btn:hover {
+  background: rgb(240, 240, 240);
+  background: transparent;
+  border: 1px solid rgb(87, 87, 87);
+  color: rgb(87, 87, 87);
+}
