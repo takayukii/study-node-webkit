@@ -12,7 +12,7 @@ var vm = new Vue({
       console.log("initialized!");
       setInterval(function(){
         self.logs.push(new Log(self.counter ++));
-      }, 2000);
+      }, 3000);
     },
     methods: {
         clear: function () {
