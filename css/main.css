@@ -48,6 +48,12 @@ html, body { height:100%; }
   font-family: 'Ubuntu Condensed', sans-serif;
 }
 
+#start {
+  position : absolute;
+  top : 15px;
+  right: 120px;
+}
+
 #clear {
   position : absolute;
   top : 15px;

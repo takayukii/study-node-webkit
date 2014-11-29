@@ -1,4 +1,6 @@
 var Log = require( './log' );
+var io = require('socket.io-client');
+var socket = io();
 
 var vm = new Vue({
     el: '#ble-console',
@@ -9,12 +11,25 @@ var vm = new Vue({
     },
     created: function() {
       var self = this;
-      console.log("initialized!");
-      setInterval(function(){
-        self.logs.push(new Log(self.counter ++));
-      }, 3000);
+
+      socket.on('trace', function(content) {
+        console.log("trace");
+        self.logs.push(new Log(JSON.stringify(content)));
+      });
+
+      socket.on('advertise', function(content) {
+        console.log("advertise");
+        self.logs.push(new Log(JSON.stringify(content)));
+      });
+      console.log("emit trace");
+      socket.emit('trace');
+
     },
     methods: {
+        start: function () {
+          console.log("emit advertise");
+          socket.emit('advertise');
+        },
         clear: function () {
             this.logs = [];
         }
